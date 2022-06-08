@@ -9,10 +9,14 @@ def save():
 
 
 def delete_all():
-    pass
+    sql = "DELETE FROM albums"
+    run_sql(sql)
 
-def delete():
-    pass
+
+def delete(id):
+    sql = "DELETE FROM albums WHERE id =%s"
+    values = [id]
+    run_sql(sql, values)
 
 
 def select():
@@ -22,8 +26,10 @@ def select():
 def select_all():
     pass
 
+
 def list_by_artist():
     pass
 
-def update ():
+
+def update():
     pass
